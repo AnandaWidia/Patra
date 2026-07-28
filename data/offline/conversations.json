@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cv-01",
+    "hostId": "host-01",
+    "hostName": "I Made Suarta",
+    "lastMessagePreview": "Wear something you do not mind getting dust on. Cover your knees — the shrine is in the same…",
+    "lastMessageAt": "14 June, 9:12",
+    "unread": true,
+    "bookingId": "bk-01"
+  },
+  {
+    "id": "cv-02",
+    "hostId": "host-02",
+    "hostName": "Ibu Wayan",
+    "lastMessagePreview": "It was good to cook with you. The recipe you asked about — my daughter wrote it down.",
+    "lastMessageAt": "28 April, 18:04",
+    "unread": false,
+    "bookingId": "bk-03"
+  }
+]

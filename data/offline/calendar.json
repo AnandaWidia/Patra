@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cal-01",
+    "name": "Galungan",
+    "startDate": "2026-06-14",
+    "endDate": "2026-06-16",
+    "status": "closed",
+    "statusLabel": "14–16 JUNE · CLOSED",
+    "attributedTo": "EXPLAINED BY BANJAR MAS, IN THEIR WORDS",
+    "explanation": "The ancestors return and we prepare for three days. Every compound in Mas is closed. This happens roughly every 210 days, and it has never moved for anyone.",
+    "availability": "Nothing is bookable on these three days.",
+    "village": "Mas, Gianyar",
+    "bookableFrom": "2026-06-18"
+  },
+  {
+    "id": "cal-02",
+    "name": "The day after",
+    "startDate": "2026-06-18",
+    "endDate": "2026-06-18",
+    "status": "open",
+    "statusLabel": "18 JUNE · OPEN",
+    "attributedTo": "",
+    "explanation": "The offerings are still standing and the penjor are still up. Hosts who open on this day often say it is the best one to come.",
+    "availability": "Three experiences open. I Made Suarta, Ibu Wayan, Pak Nyoman.",
+    "village": "Mas, Gianyar",
+    "bookableFrom": "2026-06-18"
+  },
+  {
+    "id": "cal-03",
+    "name": "Kuningan",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "status": "partial",
+    "statusLabel": "4 JULY · PARTIAL",
+    "attributedTo": "EXPLAINED BY BANJAR KEMENUH, IN THEIR WORDS",
+    "explanation": "We finish before noon. After that the kitchen is free and Ibu Wayan has said she is happy to cook with visitors.",
+    "availability": "One experience open, from two in the afternoon.",
+    "village": "Kemenuh, Gianyar",
+    "bookableFrom": "2026-07-04"
+  }
+]

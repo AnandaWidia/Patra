@@ -1,0 +1,232 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   PATRA — Design Tokens
+   Source: Figma "09 — Engineering Handoff" §05 Design Tokens.
+   Two collections. Primitives hold raw values in one mode; Semantics alias
+   them across Light and Inverse. Bind to semantics only — never to a
+   primitive, never to a literal.
+   ========================================================================== */
+
+/* --- Primitives. Internal. Never imported by feature code. --------------- */
+:root {
+  --primitive-bone-50: #fbfaf6;
+  --primitive-bone-100: #f0ede3;
+  --primitive-bone-200: #dcd8c9;
+  --primitive-ink-900: #1c1b18;
+  --primitive-ink-800: #26251f;
+  --primitive-ink-700: #333029;
+  --primitive-ink-500: #5b574c;
+  --primitive-ink-400: #868377;
+  --primitive-stone-500: #7d7a72;
+  --primitive-moss-700: #525d19;
+  --primitive-moss-400: #7e884d;
+  --primitive-clay-700: #923d29;
+  --primitive-clay-400: #ba6f5d;
+  --primitive-pine-700: #38604a;
+  --primitive-pine-400: #678b77;
+}
+
+/* --- Semantics — 11 tokens, two modes. LIGHT is the default. ------------- */
+:root,
+[data-mode='light'] {
+  --surface-page: var(--primitive-bone-50);
+  --surface-raised: var(--primitive-bone-100);
+  --surface-sunken: var(--primitive-bone-200);
+  --surface-inverse: var(--primitive-ink-900);
+
+  --text-primary: var(--primitive-ink-900);
+  --text-secondary: var(--primitive-ink-500);
+
+  --voice-brand: var(--primitive-moss-700);
+  --voice-refusal: var(--primitive-clay-700);
+  --voice-confirmation: var(--primitive-pine-700);
+
+  --boundary-interactive: var(--primitive-stone-500);
+  --boundary-focus: var(--primitive-ink-900);
+}
+
+[data-mode='inverse'] {
+  --surface-page: var(--primitive-ink-900);
+  --surface-raised: var(--primitive-ink-800);
+  --surface-sunken: var(--primitive-ink-700);
+  --surface-inverse: var(--primitive-bone-50);
+
+  --text-primary: var(--primitive-bone-50);
+  --text-secondary: var(--primitive-ink-400);
+
+  --voice-brand: var(--primitive-moss-400);
+  --voice-refusal: var(--primitive-clay-400);
+  --voice-confirmation: var(--primitive-pine-400);
+
+  --boundary-interactive: var(--primitive-bone-200);
+  --boundary-focus: var(--primitive-bone-50);
+}
+
+/* --- Tailwind theme mapping --------------------------------------------- */
+@theme inline {
+  /* Colour — semantics only. */
+  --color-surface-page: var(--surface-page);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-voice-brand: var(--voice-brand);
+  --color-voice-refusal: var(--voice-refusal);
+  --color-voice-confirmation: var(--voice-confirmation);
+  --color-boundary-interactive: var(--boundary-interactive);
+  --color-boundary-focus: var(--boundary-focus);
+
+  /* Typeface. §10 — two families, no others. */
+  --font-host: var(--font-spectral), Georgia, serif;
+  --font-platform: var(--font-plex-sans), system-ui, sans-serif;
+
+  /* Spacing. §05 — seven values, no others. */
+  --spacing: 4px;
+
+  /* Radius. §05 — one value, controls only. Surfaces are square. */
+  --radius-control: 4px;
+
+  /* Motion. §05 — one duration, one easing. */
+  --duration-transition: 300ms;
+  --ease-transition: cubic-bezier(0, 0, 0.58, 1);
+
+  /* Layout. §06 — one viewport. */
+  --spacing-viewport-w: 390px;
+  --spacing-viewport-h: 844px;
+  --spacing-safe-top: 44px;
+  --spacing-safe-bottom: 34px;
+  --spacing-header: 56px;
+  --spacing-tabbar: 90px;
+  --spacing-content: 342px;
+}
+
+/* --- Base --------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+    /* §05 — no shadows, no elevation, no gradients. */
+  }
+
+  /* §11 — boundary/focus at 2px is the only focus indicator, and is
+     reserved exclusively for keyboard focus. Never hover, never selection. */
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--boundary-focus);
+    outline-offset: 2px;
+  }
+
+  /* §07 / §11 — honour the OS preference by rendering transitions
+     instantly. Motion carries orientation only, never information. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * §06 — the content column is 342px, centred by 24px padding inside a
+   * 390px viewport. A classic desktop scrollbar sits in the layout and steals
+   * ~15px of that column, which drags the calendar cell below the 45px §11
+   * specifies. On the phone this product targets, scrollbars overlay and take
+   * no width, so the scrollbar is made an overlay here too and the frozen
+   * column width is preserved. Scrolling itself is untouched.
+   */
+  .scroll-region {
+    scrollbar-width: none;
+  }
+
+  .scroll-region::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* --- Typography — 7 roles, no others. §05 ------------------------------- */
+@layer components {
+  .type-host-display {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -0.02em;
+  }
+
+  .type-host-title {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+  }
+
+  .type-host-lede {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0;
+  }
+
+  /* §14 — the Bahasa quotation on Host Profile has no assigned text style
+     because the scale has no italic variant. Added here as specified. */
+  .type-host-lede-italic {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0;
+  }
+
+  .type-host-body {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+
+  .type-platform-body {
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .type-platform-meta {
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .type-platform-label {
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.12em;
+    /* No text-transform. §05 describes this role as carrying uppercase
+       section labels, but the frozen frames also set it in sentence case
+       (the craft line on Experience Card). Casing is therefore carried by
+       the copy itself, so the role never rewrites frozen text. */
+  }
+}

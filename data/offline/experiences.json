@@ -1,0 +1,80 @@
+[
+  {
+    "id": "exp-01",
+    "photoKey": "card-carving",
+    "hostId": "host-01",
+    "title": "Carving in hibiscus wood",
+    "hostName": "I Made Suarta",
+    "format": "A day at his workbench",
+    "durationHours": 4,
+    "pricePerPerson": 375000,
+    "currency": "IDR",
+    "groupCap": 6,
+    "placesRemaining": 3,
+    "village": "Mas, Gianyar",
+    "nextOpenDate": "2026-06-18",
+    "photo": "",
+    "home": {
+      "label": "Carving in hibiscus wood",
+      "detail": "Thursday 18 June · three places left",
+      "verification": "Verified by Banjar Mas"
+    },
+    "explore": {
+      "label": "MAS, GIANYAR",
+      "detail": "Carving, four hours, six people or fewer",
+      "verification": "Verified by Banjar Mas"
+    }
+  },
+  {
+    "id": "exp-02",
+    "photoKey": "card-cooking",
+    "hostId": "host-02",
+    "title": "Cooking and offerings",
+    "hostName": "Ibu Wayan",
+    "format": "A morning in her kitchen",
+    "durationHours": 5,
+    "pricePerPerson": 300000,
+    "currency": "IDR",
+    "groupCap": 4,
+    "placesRemaining": 4,
+    "village": "Kemenuh, Gianyar",
+    "nextOpenDate": "2026-06-20",
+    "photo": "",
+    "home": {
+      "label": "Cooking and offerings",
+      "detail": "Saturday 20 June · four places left",
+      "verification": "Verified by Banjar Mas"
+    },
+    "explore": {
+      "label": "KEMENUH, GIANYAR",
+      "detail": "Cooking and offerings, five hours, four people or fewer",
+      "verification": "Verified by Banjar Kemenuh"
+    }
+  },
+  {
+    "id": "exp-03",
+    "photoKey": "card-gamelan",
+    "hostId": "host-03",
+    "title": "Gamelan tuning",
+    "hostName": "Pak Nyoman",
+    "format": "An afternoon in the forge",
+    "durationHours": 3,
+    "pricePerPerson": 350000,
+    "currency": "IDR",
+    "groupCap": 8,
+    "placesRemaining": 2,
+    "village": "Singapadu, Gianyar",
+    "nextOpenDate": "2026-06-23",
+    "photo": "",
+    "home": {
+      "label": "Gamelan tuning",
+      "detail": "Tuesday 23 June · two places left",
+      "verification": "Verified by Banjar Mas"
+    },
+    "explore": {
+      "label": "SINGAPADU, GIANYAR",
+      "detail": "Gamelan, three hours, eight people or fewer",
+      "verification": "Verified by Banjar Singapadu"
+    }
+  }
+]

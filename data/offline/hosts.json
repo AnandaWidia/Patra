@@ -1,0 +1,44 @@
+[
+  {
+    "id": "host-01",
+    "name": "I Made Suarta",
+    "village": "Mas",
+    "regency": "Gianyar",
+    "villageLabel": "MAS, GIANYAR",
+    "craft": "Wood carver · Mas, Gianyar",
+    "photoBrief": "EXP-004 · Hero · hands, chisel, unfinished wood",
+    "storyLine": "He carves the same figure his grandfather carved.",
+    "longStory": [
+      "You will hold a chisel that is older than you are, and you will be bad at it. He will correct your grip once, quietly, and then let you keep going. By the afternoon you will have a piece of hibiscus wood with a shape in it that is recognisably yours and recognisably wrong.",
+      "Rice, banana leaf and a knife are laid out before you arrive. Nothing is demonstrated. You are handed the tool."
+    ],
+    "verification": {
+      "label": "VERIFIED BY THE VILLAGE",
+      "verifiedBy": "Banjar Mas, 12 June 2026",
+      "note": "The full verification record, and his own account of the work, are on his profile.",
+      "method": "banjar-in-person",
+      "inPerson": true
+    },
+    "fixed": [
+      "Four hours, from nine in the morning.",
+      "Six people or fewer. Never more.",
+      "Tools are his. The wood is yours to keep."
+    ],
+    "revenueSplit": {
+      "label": "WHERE YOUR MONEY GOES",
+      "figures": "Rp375.000 per person. Of that, Rp300.000 goes directly to his household.",
+      "justification": "The remaining Rp75.000 covers payment processing, the verification visit, and the Heritage Preservation Fund. You will see the same figures again before you pay."
+    },
+    "durationLine": "Four hours · Thursday 18 June is the next open day",
+    "availability": {
+      "summary": "Closed 14–16 June for Galungan.",
+      "attributedTo": "EXPLAINED BY BANJAR MAS, IN THEIR WORDS",
+      "explanation": "The family is preparing offerings, which take three days. This happens roughly every 210 days. The next open days are 17, 18 and 19 June."
+    },
+    "reviewsIntro": "Thirty-one people have been. These are the three most recent, not the three best.",
+    "phone": "+62 812 3456 7890",
+    "quoteOriginal": "",
+    "quoteTranslated": "",
+    "photo": ""
+  }
+]

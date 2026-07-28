@@ -1,0 +1,20 @@
+[
+  {
+    "id": "pm-qris",
+    "rail": "qris",
+    "label": "QRIS",
+    "detail": "processed by Midtrans"
+  },
+  {
+    "id": "pm-wallet",
+    "rail": "wallet",
+    "label": "GoPay, OVO or DANA",
+    "detail": "Opens your wallet app to approve"
+  },
+  {
+    "id": "pm-card",
+    "rail": "card",
+    "label": "Card · Visa or Mastercard",
+    "detail": "Charged in rupiah. Your bank sets the rate."
+  }
+]

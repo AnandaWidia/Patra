@@ -1,0 +1,29 @@
+[
+  {
+    "id": "msg-01",
+    "conversationId": "cv-01",
+    "author": "host",
+    "attribution": "I MADE · 14 JUNE, 9:12",
+    "body": "Wear something you do not mind getting dust on. Cover your knees — the shrine is in the same courtyard as the workshop. Come hungry, we eat after.",
+    "sentAt": "2026-06-14T09:12:00+08:00",
+    "deliveredVia": "whatsapp"
+  },
+  {
+    "id": "msg-02",
+    "conversationId": "cv-01",
+    "author": "traveller",
+    "attribution": "YOU · 14 JUNE, 9:40",
+    "body": "Thank you. Is it alright if we arrive fifteen minutes early?",
+    "sentAt": "2026-06-14T09:40:00+08:00",
+    "deliveredVia": "app"
+  },
+  {
+    "id": "msg-03",
+    "conversationId": "cv-01",
+    "author": "host",
+    "attribution": "I MADE · 14 JUNE, 11:30",
+    "body": "Come whenever. I am there from seven. If the gate is shut, push it — it sticks.",
+    "sentAt": "2026-06-14T11:30:00+08:00",
+    "deliveredVia": "whatsapp"
+  }
+]

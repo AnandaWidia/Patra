@@ -1,0 +1,31 @@
+{
+  "id": "user-01",
+  "fullName": "Emma Whitfield",
+  "email": "emma.whitfield@gmail.com",
+  "verification": {
+    "status": "verified",
+    "method": "document-photo",
+    "verifiedDate": "2026-07-12",
+    "shownToHosts": true
+  },
+  "paymentMethods": [
+    {
+      "id": "pm-qris",
+      "rail": "qris",
+      "label": "QRIS",
+      "detail": "Any Indonesian bank or e-wallet"
+    },
+    {
+      "id": "pm-card",
+      "rail": "card",
+      "label": "Card",
+      "detail": "Visa, Mastercard"
+    }
+  ],
+  "notificationPrefs": {
+    "bookingUpdates": true,
+    "hostMessages": true
+  },
+  "language": "English",
+  "hasPassword": false
+}
