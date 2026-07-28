@@ -10,6 +10,7 @@ import { HostBody, Label, Meta, Title } from '@/components/ui/typography';
 import { ROUTES } from '@/constants/routes';
 import { useSession } from '@/contexts/session-context';
 import { signInWithPassword } from '@/lib/auth/actions';
+import { claimGuestRecords, forgetGuest } from '@/lib/services/guest';
 
 /**
  * Sign In — Figma 2:3190 "[COMPLETE] Sign In — 390 · Mobile".
@@ -48,6 +49,19 @@ export function SignInScreen() {
         setError(result.message ?? 'That did not work. Try again.');
         return;
       }
+      // "Find your bookings again" is literal. A traveller who set a password
+      // while email confirmation was on had no session at the time, so Set a
+      // Password could not claim for them — this is where it happens instead.
+      // Idempotent by construction: claim_guest_records only ever takes rows
+      // that belong to nobody.
+      try {
+        await claimGuestRecords(email.trim().toLowerCase());
+        forgetGuest();
+      } catch {
+        // Never block a sign-in on this. The booking is still unclaimed and
+        // the next sign-in will try again.
+      }
+
       signIn();
       router.push(params.get('redirectTo') ?? ROUTES.profile);
       router.refresh();
